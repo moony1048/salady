@@ -1,0 +1,99 @@
+@charset 'utf-8';
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body {
+    font: 400 1.6rem Pretendard, sans-serif;
+    /* font-optical-sizing: auto; */
+    color: var(--text-color);
+    /* letter-spacing: -0.8px; */
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #175436;
+    --text-color: #000;
+
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inner {
+    width: 168rem;
+    height: 100%;
+    margin: 0 auto;
+
+    /* border: 1px solid #000; */
+}
+
+/* section-title 공통부분*/
+.section-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.more {
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.more::before {
+    content: "";
+    display: inline-block;
+
+    background: url(../img/icon_plus.svg) no-repeat 0 0 / contain;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    transform: translateY(-1px);
+}
+
+.line {
+    width: 168rem;
+    margin-top: 10px;
+    border: 1px solid #333;
+}
