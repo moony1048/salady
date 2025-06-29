@@ -85,8 +85,12 @@
                     <ul class="utilmenu">
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">KOR</a></li>
-                        <!-- kor 화살표 추가하기 -->
                     </ul>
+
+                    <!-- 태블릿/모바일용 햄버거 메뉴 -->
+                    <button type="button" class="btn-menu">
+                        <i class="hidden">메뉴</i>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -94,7 +98,7 @@
         <!-- //e: header -->
 
         <main id="main">
-            <section class="visual">
+            <!-- <section class="visual">
                 <h2 class="hidden">메인비주얼</h2>
                 <div class="inner">
                     <div class="visual-slider-wrap">
@@ -155,7 +159,151 @@
                         </div>
                     </div>
                 </div>
+            </section> -->
+
+            <!-- 반응형 -->
+            <section class="visual">
+                <h2 class="hidden">메인비주얼</h2>
+                <div class="inner">
+                    <div class="visual-slider-wrap">
+                        <div class="swiper visual-slider">
+                            <div class="swiper-wrapper">
+                                <!-- visual01 -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual01.png
+                                                    "
+                                                    media="(max-width: 600px)"
+                                                />
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual01.png
+                                                    "
+                                                    media="(max-width: 1024px)"
+                                                />
+                                                <img
+                                                    src="./img/visual01.png"
+                                                    alt="메인비주얼01"
+                                                />
+                                            </picture>
+                                        </figure>
+                                    </a>
+                                </div>
+
+                                <!-- visual02 -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual02.jpg
+                                                    "
+                                                    media="(max-width: 600px)"
+                                                />
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual02.jpg
+                                                    "
+                                                    media="(max-width: 1024px)"
+                                                />
+                                                <img
+                                                    src="./img/visual02.png"
+                                                    alt="메인비주얼02"
+                                                />
+                                            </picture>
+                                        </figure>
+                                    </a>
+                                </div>
+
+                                <!-- visual03 -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual03.png
+                                                    "
+                                                    media="(max-width: 600px)"
+                                                />
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual03.png
+                                                    "
+                                                    media="(max-width: 1024px)"
+                                                />
+                                                <img
+                                                    src="./img/visual03.png"
+                                                    alt="메인비주얼03"
+                                                />
+                                            </picture>
+                                        </figure>
+                                    </a>
+                                </div>
+
+                                <!-- visual04 -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual04.png
+                                                    "
+                                                    media="(max-width: 600px)"
+                                                />
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual04.png
+                                                    "
+                                                    media="(max-width: 1024px)"
+                                                />
+                                                <img
+                                                    src="./img/visual04.png"
+                                                    alt="메인비주얼04"
+                                                />
+                                            </picture>
+                                        </figure>
+                                    </a>
+                                </div>
+
+                                <!-- visual05 -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <picture>
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual05.png
+                                                    "
+                                                    media="(max-width: 600px)"
+                                                />
+                                                <source
+                                                    srcset="
+                                                        ./img/moblie_visual05.png
+                                                    "
+                                                    media="(max-width: 1024px)"
+                                                />
+                                                <img
+                                                    src="./img/visual05.png"
+                                                    alt="메인비주얼05"
+                                                />
+                                            </picture>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
             <!-- //e: visual -->
 
             <section class="menu">
@@ -327,6 +475,7 @@
                         <figure>
                             <img src="./img/brandstory.jpg" alt="brand story" />
                         </figure>
+
                         <div class="brand-con-text">
                             <dl>
                                 <dt>BRAND STORY</dt>
@@ -354,10 +503,16 @@
                         <div class="franchsie-con-text">
                             <dl>
                                 <dt>FRANCHISE</dt>
-                                <dd>
+                                <dd class="only-pc">
                                     즐거움과 건강함을 함께 전할, 샐러디의
                                     파트너를 기다립니다
                                 </dd>
+                                <!-- 태블릿 -->
+                                <dd class="only-tablet">
+                                    즐거움과 건강함을 함께 전할,<br />
+                                    샐러디의 파트너를 기다립니다
+                                </dd>
+                                <!--  -->
                             </dl>
                             <a href="#">
                                 <div class="btn-more">MORE</div>

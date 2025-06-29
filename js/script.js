@@ -53,16 +53,46 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    // const menuSlider = new Swiper(".menu-slider", {
+    //     // slidesPerView: 4,
+    //     slidesPerView: "auto", //css에서 가로크기를 부여
+    //     // centeredSlides: true,
+    //     spaceBetween: 20,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 1000,
+    //     },
+    //     speed: 2600,
+
+    //     breakpoints: {
+    //         600: {
+    //             slidesPerView: 1.5, // 모바일에서 1.5개 보이게
+    //         },
+    //     },
+    // });
+
     const menuSlider = new Swiper(".menu-slider", {
-        // slidesPerView: 4,
-        slidesPerView: "auto", //css에서 가로크기를 부여
-        // centeredSlides: true,
-        spaceBetween: 20,
+        slidesPerView: 1.5,
+        centeredSlides: true, // 가운데 정렬
+        spaceBetween: 15, // 슬라이드 간 간격
         loop: true,
         autoplay: {
             delay: 1000,
         },
         speed: 2600,
+
+        breakpoints: {
+            // PC (1024px 이상)
+            1024: {
+                slidesPerView: "auto",
+                centeredSlides: false,
+            },
+            // 태블릿 (600px ~ 1023px)
+            600: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+        },
     });
 
     const eventSlider = new Swiper(".event-slider", {
@@ -81,6 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
             clickable: true,
             type: "bullets",
         },
+
+        // breakpoints: {
+        //     // PC (1024px 이상)
+        //     1024: {
+        //         slidesPerView: "auto",
+        //         centeredSlides: false,
+        //     },
+        //     // 태블릿 (600px ~ 1023px)
+        //     600: {
+        //         slidesPerView: 3,
+        //         centeredSlides: false,
+        //     },
+        // },
     });
 
     // GSAP
@@ -123,6 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 초기 세팅
     gsap.set(imgBox, { opacity: 0, scale: 0.8 });
+
+    // PC 사이즈에서만 실행
+    if (window.innerWidth > 1024) {
+        showImage();
+        followImage();
+    }
 
     // 애니메이션을 위한 타임라인 설정
     const tl = gsap.timeline({

@@ -54,6 +54,8 @@ figure img {
 
 .inner {
     width: 168rem;
+    width: 100%;
+    max-width: 168rem;
     height: 100%;
     margin: 0 auto;
 
